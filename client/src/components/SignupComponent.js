@@ -170,7 +170,7 @@ class SignupComponent extends Component {
                 </form>
                 <br/>
                 <center>
-                  <a className="btn btn-light" href="http://localhost:5000/api/auth/auth/google" className="button">
+                  <a className="btn btn-light" href="https://aqueous-plateau-65721.herokuapp.com/api/auth/auth/google" className="button">
                   <div>
                     <span className="svgIcon t-popup-svg">
                       <svg
