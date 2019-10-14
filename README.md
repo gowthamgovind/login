@@ -8,6 +8,7 @@ Add the config data in config/keys.js file.
 For Testing:
 
 Email ID: rithu1@gmail.com
+
 Password: 123456
 
 ```bash
