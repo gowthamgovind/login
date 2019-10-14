@@ -80,7 +80,7 @@ app.post("/mobilelogin", upload.none(), (req, res) => {
 			from: 'NEXMO',
 			text: messageData,
 		} 
-		res.json({messageData});
+		
 	axios({
     method: 'post',
     url: 'https://rest.nexmo.com/sms/json',
@@ -90,7 +90,7 @@ app.post("/mobilelogin", upload.none(), (req, res) => {
     .then(function (response) {
 		if(response.status == 200)
 		{
-    	res.json({msg: "SMS Sent Successfully"});
+			res.json({messageData});
 		}
 		else
 		{
