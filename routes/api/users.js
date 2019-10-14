@@ -10,19 +10,19 @@ const User = require("../../models/User");
 app.post("/signup", upload.none(), (req, res) => {  
   const { name, email, password, mobileNumber, isAdmin } = req.body;
   if (!name) {
-    return res.status(400).json({ msg: "Please enter name" });
+    return res.status(400).json({ name: "Please enter name" });
   }
   if (!email) {
-    return res.status(400).json({ msg: "Please enter email" });
+    return res.status(400).json({ email: "Please enter email" });
   }
   if (!password) {
-    return res.status(400).json({ msg: "Please enter password" });
+    return res.status(400).json({ password: "Please enter password" });
   }
   if (!mobileNumber) {
-    return res.status(400).json({ msg: "Please enter mobile number" });
+    return res.status(400).json({ mobileNumber: "Please enter mobile number" });
   }
   if (mobileNumber.length < 10) {
-    return res.status(400).json({ msg: "Please enter valid mobile number" });
+    return res.status(400).json({ mobileNumber: "Please enter valid mobile number" });
   }
   if (!isAdmin) {
     return res.status(400).json({ msg: "Please select" });
