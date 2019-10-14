@@ -152,7 +152,7 @@ app.get(
   passport.authenticate("google", { failureRedirect: "/", session: false }),
   function (req, res) {
     var token = req.user.token;    
-    res.redirect("https://aqueous-plateau-65721.herokuapp.com/signup?token=" + token + "?email=" + req.user.email + "?name=" + req.user.name) ;
+    res.redirect("https://obscure-fjord-82427.herokuapp.com/signup?token=" + token + "?email=" + req.user.email + "?name=" + req.user.name) ;
   }
 );
 // @route   GET api/auth/user
