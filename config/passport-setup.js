@@ -10,7 +10,7 @@ passport.serializeUser(function (user, done) {
         {
             clientID: config.googleClient,
             clientSecret: config.googleSecret,
-            callbackURL: "http://localhost:5000/api/auth/auth/google/callback"
+            callbackURL: "https://obscure-fjord-82427.herokuapp.com/api/auth/auth/google/callback"
         },
         function (accessToken, refreshToken, profile, done) {
             var userData = {
