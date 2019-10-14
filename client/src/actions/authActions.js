@@ -8,7 +8,7 @@ import setAuthToken from "../utils/setAuthToken";
 import jwt_decode from "jwt-decode";
 export const loginUser = userData => dispatch => {
   axios
-    .post("http://localhost:5000/api/auth/login", userData)
+    .post("/api/auth/login", userData)
     .then(res => {
       //set to local storage
       const { token } = res.data;
@@ -33,7 +33,7 @@ export const loginUser = userData => dispatch => {
 
 export const signupUser = userData => dispatch => {
   axios
-    .post("http://localhost:5000/api/users/signup", userData)
+    .post("/api/users/signup", userData)
     .then(res => {
       //set to local storage
       window.location.href = "/";
@@ -59,7 +59,7 @@ export const signupUser = userData => dispatch => {
 
 export const loginUserMobile = userDataMobile => dispatch => { 
 
-  axios.post('http://localhost:5000/api/auth/mobilelogin', 
+  axios.post('/api/auth/mobilelogin', 
   {
     mobileNumber: userDataMobile
   })
@@ -89,7 +89,7 @@ export const loginUserMobile = userDataMobile => dispatch => {
 
 export const otp = userDataOtp => dispatch => {
   axios
-    .post("http://localhost:5000/api/auth/otpValidate", userDataOtp)
+    .post("/api/auth/otpValidate", userDataOtp)
     .then((res,err) => {
       
       //set to local storage
@@ -146,7 +146,7 @@ export const validateMobile = data => {
 
 export const getUsers = () => dispatch => {
   axios
-    .get("http://localhost:5000/api/users/getusers")
+    .get("/api/users/getusers")
     .then(response => {
       if (response.status === 200 && response.data.length !== 0) {        
         dispatch(userList(response.data))
