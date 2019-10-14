@@ -6,7 +6,8 @@ import {
 import setAuthToken from "../utils/setAuthToken";
 
 import jwt_decode from "jwt-decode";
-export const loginUser = userData => dispatch => {
+export const loginUser = userData => dispatch => 
+{
   axios
     .post("/api/auth/login", userData)
     .then(res => {
