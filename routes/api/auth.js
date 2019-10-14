@@ -19,8 +19,11 @@ app.post("/login", upload.none(), (req, res) => {
   const { email, password } = req.body;
 
   // Simple validation
-  if (!email || !password) {
-    return res.status(400).json({ msg: "Please enter all fields" });
+  if (!email) {
+    return res.status(400).json({ email: "Please enter email" });
+  }
+  if (!password) {
+    return res.status(400).json({ password: "Please enter password" });
   }
 
   // Check for existing user
