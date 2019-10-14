@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.static("public"));
 // DB Config
 const db = require("./config/keys").mongoURI;
+console.log(db);
 // Connect to Mongo
 mongoose
   .connect(db, {
