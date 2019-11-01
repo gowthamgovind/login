@@ -5,7 +5,7 @@ export default class NotFoundComponent extends Component {
     const topics = this.state;
     return (
       <div style={{ marginTop: 50 }}>
-        <h3>Page Not Found</h3>
+        <h3>Redirecting...</h3>
       </div>
     );
   }
