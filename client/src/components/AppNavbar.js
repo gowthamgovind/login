@@ -102,6 +102,7 @@ class AppNavbar extends Component {
             <div>
               {isAdmin ? (
                 <Switch>
+      <Redirect to={"/"} />
                   <Route
                     exact
                     path="/"
